@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { FaPencilAlt, FaTimes } from 'react-icons';
 import Layout from '@/components/Layout';
 import { API_URL } from '@/config/index';
@@ -71,9 +71,10 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
   const res = await fetch(
-    `${API_URL}/api/Events?filters[slug][$eq]=${slug}`
+    `${API_URL}/api/events?filters[slug][$eq]=${slug}`
   );
   const events = await res.json();
+  console.log(events);
   return {
     props: {
       evt: events[0],

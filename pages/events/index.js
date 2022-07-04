@@ -18,7 +18,7 @@ export default function EventsPage({ events }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(
     `${API_URL}/api/events?_sort=date:ASC`
   );
@@ -27,5 +27,6 @@ export async function getServerSideProps() {
   console.log(events);
   return {
     props: { events },
+    revalidate: 1,
   };
 }
