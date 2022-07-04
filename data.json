@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "attributes": {
+        "name": "Throwback thursday with DJ Rex",
+        "slug": "tthrowback-thursday-with-dj-rex",
+        "venue": "Horizon club",
+        "address": "22 port hatcourt blabla",
+        "date": "2022-05-04T23:00:00.000Z",
+        "time": "4:00",
+        "performers": "Trizzi",
+        "description": "qlm;q kdnkdnqkd lknqdonq bdqjdnp oinopqdnp wdih0diw",
+        "createdAt": "2022-07-02T14:22:51.391Z",
+        "updatedAt": "2022-07-02T15:30:49.287Z",
+        "publishedAt": "2022-07-02T14:23:02.291Z"
+      }
+    },
+    {
+      "id": 2,
+      "attributes": {
+        "name": "Boom dance festival",
+        "slug": "boom-dance-festival",
+        "venue": "Calabar",
+        "address": "Surulere",
+        "date": null,
+        "time": "4:00",
+        "performers": "Trizzi",
+        "description": "envkpev qvn1pkvn rovn3ogv3ngrip 2bfojof o2fbobc jzodiudhiwhfu ",
+        "createdAt": "2022-07-02T15:38:16.302Z",
+        "updatedAt": "2022-07-02T15:38:17.947Z",
+        "publishedAt": "2022-07-02T15:38:17.944Z"
+      }
+    },
+    {
+      "id": 3,
+      "attributes": {
+        "name": "Encore Night Boat Party",
+        "slug": "Encore-Night-Boat-Party",
+        "venue": "Lagos",
+        "address": "22 port hatcourt blabla",
+        "date": "2020-01-14T03:27:00.000Z",
+        "time": "10:00PM",
+        "performers": "Paul",
+        "description": "### sbvljv lw ljvvbOWDBVL LJSLb cwdjbv fvhefolbge blfsbfpqi",
+        "createdAt": "2022-07-03T04:15:34.670Z",
+        "updatedAt": "2022-07-03T04:15:36.155Z",
+        "publishedAt": "2022-07-03T04:15:36.153Z"
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 25,
+      "pageCount": 1,
+      "total": 3
+    }
+  }
+}
