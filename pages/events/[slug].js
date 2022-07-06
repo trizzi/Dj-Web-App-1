@@ -67,11 +67,12 @@ export async function getStaticPaths() {
     paths,
     fallback: true,
   };
+  console.log('Hi', params);
 }
 
 export async function getStaticProps({ params: { slug } }) {
   const res = await fetch(
-    `${API_URL}/api/events?filters[slug][$eq]=${slug}`
+    `${API_URL}/api/events?filters[slug]=${slug}`
   );
   const events = await res.json();
   console.log(events);
