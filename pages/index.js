@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import { API_URL } from '@/config/index';
+import { API_URL } from '@/config/index.js';
 import Link from 'next/link';
 import EventItem from '@/components/EventItem';
 

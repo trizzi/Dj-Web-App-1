@@ -9,6 +9,7 @@ import { API_URL } from '@/config/index.js';
 import { useRouter } from 'next/router';
 import styles from '@/styles/Form.module.css';
 import Modal from '@/components/Modal';
+import ImageUpload from '@/components/ImageUpload';
 import Layout from '@/components/Layout';
 
 export default function EditEventPage({ evt }) {
@@ -62,6 +63,15 @@ export default function EditEventPage({ evt }) {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
+  };
+
+  const imageUploaded = async (e) => {
+    const res = await fetch(
+      `${API_URL}/api/events/${evt.id}`
+    );
+    const data = await res.json();
+    setImagePreview(data.image.formats.thumbnail.url);
+    setShowModal(false);
   };
 
   return (
@@ -169,7 +179,7 @@ export default function EditEventPage({ evt }) {
 
       <div>
         <button
-          onClick={() => setShowModel(true)}
+          onClick={() => setShowModal(true)}
           className='btn-secondary'>
           <FaImage /> Set Image
         </button>
@@ -178,7 +188,10 @@ export default function EditEventPage({ evt }) {
       <Modal
         show={showModal}
         onClose={() => setShowModal(false)}>
-        IMAGE UPLOAD
+        <ImageUpload
+          evtId={evt.id}
+          imageUploaded={imageUploaded}
+        />
       </Modal>
     </Layout>
   );

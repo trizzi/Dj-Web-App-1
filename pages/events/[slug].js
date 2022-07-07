@@ -4,7 +4,7 @@ import Link from 'next/link';
 // import Image from 'next/image';
 import { FaPencilAlt, FaTimes } from 'react-icons';
 import Layout from '@/components/Layout';
-import { API_URL } from '@/config/index';
+import { API_URL } from '@/config/index.js';
 import styles from '@/styles/Event.module.css';
 import { useRouter } from 'next/router';
 
