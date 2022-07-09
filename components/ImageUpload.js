@@ -16,7 +16,7 @@ export default function ImageUpload({
     formData.append('refid', evtId);
     formData.append('field', 'image');
 
-    const res = await fetch(`${API_URL}/api/upload`, {
+    const res = await fetch(`${API_URL}/upload`, {
       method: 'POST',
       body: formData,
     });
@@ -27,6 +27,7 @@ export default function ImageUpload({
   };
 
   const handleFileChange = (e) => {
+    console.log('testing', e.target.files[0]);
     setImage(e.target.files[0]);
   };
   return (

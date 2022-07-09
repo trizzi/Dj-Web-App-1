@@ -44,13 +44,16 @@ export default function EditEventPage({ evt }) {
     }
     console.log('submit', values);
 
-    const res = await fetch(`${API_URL}/events/${evt.id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(values),
-    });
+    const res = await fetch(
+      `${API_URL}/api/events/${evt.id}`,
+      {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      }
+    );
 
     if (!res.ok) {
       toast.error('Something Went Wrong!');
