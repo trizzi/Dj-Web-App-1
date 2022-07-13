@@ -13,6 +13,10 @@ export default function loginPage() {
 
   const { login, error } = useContext(AuthContext);
 
+  useEffect(() => {
+    error && toast.error(error);
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     login({ email, password });
@@ -54,7 +58,7 @@ export default function loginPage() {
         </form>
 
         <p>
-          Don't have an account?{' '}
+          Don't have an account?
           <Link href='/account/register'>Register</Link>
         </p>
       </div>
