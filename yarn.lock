@@ -421,6 +421,11 @@
     "write-file-atomic" "^3.0.0"
     "xdg-basedir" "^4.0.0"
 
+"cookie@^0.5.0":
+  "integrity" "sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw=="
+  "resolved" "https://registry.npmjs.org/cookie/-/cookie-0.5.0.tgz"
+  "version" "0.5.0"
+
 "core-js-pure@^3.20.2":
   "integrity" "sha512-XpoouuqIj4P+GWtdyV8ZO3/u4KftkeDVMfvp+308eGMhCrA3lVDSmAxO0c6GGOcmgVlaKDrgWVMo49h2ab/TDA=="
   "resolved" "https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.23.3.tgz"
