@@ -30,21 +30,13 @@ export default function Header() {
               <a>Add Event</a>
             </Link>
           </li>
-          <li>
-            <Link href='/account/dashboard'>
-              <a>Dashboard</a>
-            </Link>
-          </li>
 
           {user ? (
             // If logged in
             <>
               <li>
-                <Link href='/account/register'>
-                  <a className='btn-secondary btn-icon'>
-                    <FaSignOutAlt />
-                    Register
-                  </a>
+                <Link href='/account/dashboard'>
+                  <a>Dashboard</a>
                 </Link>
               </li>
               <li>
@@ -58,6 +50,14 @@ export default function Header() {
             </>
           ) : (
             <>
+              <li>
+                <Link href='/account/register'>
+                  <a className='btn-secondary btn-icon'>
+                    <FaSignOutAlt />
+                    Register
+                  </a>
+                </Link>
+              </li>
               <li>
                 <Link href='/account/login'>
                   <a className='btn-secondary btn-icon'>
