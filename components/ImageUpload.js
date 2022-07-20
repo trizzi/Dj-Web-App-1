@@ -5,6 +5,7 @@ import styles from '@/styles/Form.module.css';
 export default function ImageUpload({
   evtId,
   imageUploaded,
+  token,
 }) {
   const [image, setImage] = useState(null);
 
@@ -18,6 +19,9 @@ export default function ImageUpload({
 
     const res = await fetch(`${API_URL}/upload`, {
       method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
       body: formData,
     });
 
