@@ -5,6 +5,7 @@ import styles from '@/styles/Dashboard.module.css';
 import DashboardEvent from '@/components/DashboardEvent';
 
 export default function DashboardPage({ events }) {
+  console.log(events);
   const deleteEvent = (id) => {
     console.log(id);
   };
@@ -29,6 +30,8 @@ export default function DashboardPage({ events }) {
 
 export async function getServerSideProps({ req }) {
   const { token } = parseCookies(req);
+
+  console.log(token);
 
   const res = await fetch(`${API_URL}/events/me`, {
     method: 'GET',
