@@ -4,7 +4,6 @@ import Link from 'next/link';
 import EventItem from '@/components/EventItem';
 
 export default function Home({ events }) {
-  console.log(events);
   return (
     <Layout>
       <h1>Upcoming Events</h1>
@@ -30,7 +29,6 @@ export async function getStaticProps() {
   );
   const events = await res.json();
 
-  console.log(events);
   return {
     props: { events },
     revalidate: 1,
